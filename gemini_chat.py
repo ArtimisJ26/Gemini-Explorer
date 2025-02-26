@@ -2,9 +2,10 @@ import vertexai  # Import the Vertex AI SDK to interact with Google's AI models
 import streamlit as st  # Import Streamlit to create the web interface
 from vertexai.preview import generative_models  # Import generative models from Vertex AI
 from vertexai.preview.generative_models import GenerativeModel, Part, Content, ChatSession  # Import specific components needed for generative AI chat
+from secret import *
 
 # Initialize Vertex AI with the specified project ID (replace with your actual Google Cloud project ID)
-project = "sample-id"
+project = project_id
 vertexai.init(project=project)
 
 # Define the configuration for the AI model, setting parameters such as temperature (controls randomness of responses)
